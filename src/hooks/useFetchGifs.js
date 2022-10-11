@@ -9,11 +9,12 @@ export const useFetchGifs = (category) => {
     const getImages = async() => {
     const newImages = await getGifs (category);
     setImages(newImages);
+    setIsLoading(false);
 }
 
     useEffect( () => { 
       getImages();
-      setIsLoading(false);
+      
 
     }, []);
 
@@ -21,7 +22,7 @@ export const useFetchGifs = (category) => {
 
 
     return {
-    images: images,
-    isLoading: true
+    images,
+    isLoading
     }
 }

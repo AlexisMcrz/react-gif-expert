@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const getGifs = async(category) => {
      
     const url = `https://api.giphy.com/v1/gifs/search?api_key=2R5EP4SLpQB2v2upvWIXu6aE4ryE2BGo&q=${ category }&limit=10`
